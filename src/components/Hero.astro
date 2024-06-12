@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import coffeBeans from "../assets/hero-coffee-beans.png";
+import coffeeCup from "../assets/hero-coffee.png"
+import Link from "./Link.astro";
+import { Icon } from "astro-icon/components";
+
+---
+
+
+<header class="py-8 md:py-20 relative">
+        <Image src={coffeBeans} alt="" class="absolute right-0 top-0 -z-10"/>
+        <div class="bg-accent1 absolute w-1/2 md:w-1/3 right-0 top-0 h-2/3 md:h-full -z-10"></div>
+    <div class="container flex flex-wrap-reverse justify-around items-center gap-12">
+       <div class="grid gap-4 md:basis-1/3">
+            <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold text-dark1 text-balance">El amor al <span class="text-accent1">caffe</span> con mucho <span class="text-accent1">amor</span> y cariño</h1>
+            <p class="text-balance max-w-prose">Sip, sabor, y amor a su cafe - una tasa que nuca cambiara y por una tasa de cafe echo con corazon </p>
+            <Link href="#" size={"large"} classes="group">
+                <span>Orden Now</span>
+                <div class="p-1 bg-accent1 rounded-full text-white group-hover:bg-accent2">
+                    <Icon name="cart" size={18}  />
+                </div>
+            </Link>
+       </div>
+        <!-- <div class="bg-accent1 absolute inset-0 -z-10"></div> -->
+        <Image src={coffeeCup} alt="coffe cup" class="md:basis-1/3" />
+    
+    </div>
+</header>
